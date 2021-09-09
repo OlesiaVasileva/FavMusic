@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FavMusic</string>
+    <string name="title">title</string>
+    <string name="year">year</string>
+    <string name="label">label</string>
+    <string name="no_connect">A problem with connection</string>
+</resources>
