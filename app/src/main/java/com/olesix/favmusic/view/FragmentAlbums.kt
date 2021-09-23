@@ -17,6 +17,8 @@ import dmax.dialog.SpotsDialog
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+private const val TAG = "FavMusic"
+
 class FragmentAlbums : Fragment(), KoinComponent {
 
     private var _binding: FragmentAlbumsBinding? = null
@@ -71,17 +73,17 @@ class FragmentAlbums : Fragment(), KoinComponent {
             when (state) {
                 State.LOADING -> {
                     dialog.show()
-                    Log.d("LOG_TAG", "State.LOADING")
+                    Log.d(TAG, "State.LOADING")
                 }
                 State.ERROR -> {
                     Toast.makeText(context, getString(R.string.no_connect), Toast.LENGTH_SHORT)
                         .show()
                     dialog.dismiss()
-                    Log.d("LOG_TAG", "State.ERROR")
+                    Log.d(TAG, "State.ERROR")
                 }
                 State.DONE -> {
                     dialog.dismiss()
-                    Log.d("LOG_TAG", " State.DONE")
+                    Log.d(TAG, " State.DONE")
                 }
             }
         })
