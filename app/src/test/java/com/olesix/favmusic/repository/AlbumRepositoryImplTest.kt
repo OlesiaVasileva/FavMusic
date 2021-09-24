@@ -13,7 +13,6 @@ import org.junit.Assert.*
 import org.junit.Test
 import org.mockito.kotlin.*
 import java.io.IOException
-import java.util.*
 
 class AlbumRepositoryImplTest {
 

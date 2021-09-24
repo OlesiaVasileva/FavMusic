@@ -43,6 +43,7 @@ class AlbumsPagingDataSource(
     }
 
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, AlbumModel>) {
+        updateState(State.LOADING)
         compositeDisposable.add(
             repository.getAlbumList(params.key)
                 .subscribeOn(Schedulers.io())
